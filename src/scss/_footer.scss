@@ -1,0 +1,37 @@
+@use "mixins" as m;
+
+footer {
+  height: 60vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+
+  @include m.desktop {
+    flex-direction: row;
+    height: 30vh;
+    padding: 0; 
+  }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    
+    @include m.desktop {
+     display: block;
+     margin: 0 auto;
+     padding: 40px 0;  
+    }
+      
+  &__contact {
+    color: white;
+    list-style-type: none;
+    font-size: 20px;
+    padding: 10px 0;
+  }
+}
+
+.fa-brands {
+  padding: 0 10px;
+}
